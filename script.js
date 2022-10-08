@@ -29,6 +29,9 @@ fetch(`https://api.github.com/users/${username}`).then(res => res.json()).then(
 function dark() {
     var element = document.body;
     element.classList.toggle("light-mode");
+    //disable-box-shadows
+    document.getElementById('theform').style.boxShadow = 'none';
+    document.getElementById('result').style.boxShadow = 'none';
 }
 
 const img = document.getElementById('sun');
