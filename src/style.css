@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Sacramento&display=swap");
+:root {
+  --background: #171717;
+  --primary: #202020;
+  --text: #ededed;
+  --link: rgb(47 172 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  color: var(--text);
+  background-color: var(--background);
+}
+.light-mode {
+  --background: #ededed;
+  --primary: whitesmoke;
+  --text: #252525;
+}
+.git__container {
+  width: 50%;
+  margin: 0 auto;
+}
+.git__main {
+  padding-top: 5vh;
+}
+.git__header {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  align-items: end;
+  justify-content: space-between;
+}
+.git__title {
+  font-size: 2rem;
+}
+.git__description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+#git__light {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  padding: 5px 0;
+  cursor: pointer;
+}
+.git__search__main {
+  display: grid;
+  grid-template-columns: 16fr 1fr;
+  color: var(--text);
+  background-color: var(--primary);
+  height: 35px;
+  margin-top: 10px;
+}
+#git__input,
+.git__search {
+  font-size: 1rem;
+  color: var(--text);
+  background-color: transparent;
+  border: none;
+}
+#git__input {
+  padding: 0 10px;
+  outline: none;
+}
+.git__search {
+  cursor: pointer;
+}
+#git__result {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  margin: 10px 0 10px 0;
+  padding: 40px 10px;
+  background-color: var(--primary);
+}
+#pfp {
+  width: 80%;
+  border-radius: 50%;
+}
+#git__name {
+  font-style: italic;
+}
+#git__username {
+  font-family: "Sacramento", cursive;
+  font-size: 1.6rem;
+  margin-top: -10px;
+  color: var(--link);
+  text-decoration: none;
+}
+.git__pfp {
+  width: 100%;
+  text-align: center;
+}
+.git__infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+.git__info {
+  padding: 5px 20px;
+  background-color: var(--background);
+}
+.git__details {
+  margin-top: 10px;
+}
+.git__tik {
+  font-style: italic;
+  text-transform: uppercase;
+}
+.git__dtls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#git__website,
+#git__twitter {
+  display: inline;
+  text-decoration: none;
+  color: var(--link);
+}
+#git__org {
+  display: inline;
+}
+.git__joined {
+  margin-top: 10px;
+}
+.git__credit {
+  display: flex;
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+  gap: 8px;
+}
+.git__credit > a {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+.git__header__right {
+  display: flex;
+  align-items: self-end;
+  justify-content: flex-end;
+}
+#git__result {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .git__container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .git__container {
+    width: 80%;
+  }
+  .git__header {
+    grid-template-columns: 7fr 2fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .git__container {
+    width: 90%;
+  }
+  #git__result {
+    padding: 10px 30px;
+    grid-template-columns: 1fr;
+  }
+  #pfp {
+    width: 30%;
+  }
+  #git__name,
+  .git__title {
+    font-size: 1.5rem;
+  }
+  #git__username {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .git__infos {
+    grid-template-columns: 1fr;
+  }
+  .git__dtls {
+    grid-template-columns: 1fr;
+  }
+  #git__name,
+  .git__title {
+    font-size: 1.2rem;
+  }
+  #pfp {
+    width: 200px;
+  }
+  .git__info {
+    padding: 5px 0;
+    background-color: transparent;
+    border-top: 1px solid white;
+  }
+  .git__info:nth-child(3) {
+    border-bottom: 1px solid white;
+  }
+  .git__search__main {
+    grid-template-columns: 16fr 2fr;
+  }
+  .git__header {
+    grid-template-columns: 7fr 4fr;
+  }
+  #git__result {
+    padding: 10px 15px;
+  }
+}

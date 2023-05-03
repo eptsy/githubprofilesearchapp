@@ -1,93 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Profile Search App</title>
-    <link rel="icon" href="img/github.png" type="image/x-icon">
-    <!--CSS Linking-->
-    <link rel="stylesheet" href="style.css">
-    <!--FontAwesome CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="whole container">
-        <div class="header">
-            <div class="header1">
-                <h1>gitsearch</h1>
-                <h3>Lets stalk someone on github</h3>
-            </div>
-            <div class="header2">
-                <button id="lightmode" onclick="dark()">LIGHT <i class="fa-solid fa-sun" id="sun"></i></button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Search App</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="git__main git__container">
+      <!-- header -->
+      <div class="git__header">
+        <div class="git__header__left">
+          <h1 class="git__title">— gitsearch —</h1>
+          <p class="git__description">Search any github user for information</p>
         </div>
-        <div class="search">
-            <form action="" class="form" id="theform">
-                <input type="text" id="searchuser" spellcheck="false" autocomplete="off" required>
-                <button id="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+        <div class="git__header__right">
+          <button id="git__light" onclick="dark()">
+            LIGHT MODE <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
         </div>
-        <div class="" id="result">
-            <div class="left">
-                <img src="" alt="" id="pfp">
+      </div>
+      <!-- search -->
+      <form action="" class="git__search__main" id="git__form">
+        <input type="text" id="git__input" />
+        <button class="git__search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div id="git__result">
+        <div class="git__pfp">
+          <img
+            src="./images/favicon.png"
+            alt="user image"
+            id="pfp"
+            draggable="false"
+          />
+        </div>
+        <div class="git__result__info">
+          <h1 id="git__name">Irfan Shadik Rishad</h1>
+          <a href="" target="_blank" id="git__username">@irfanshadikrishad</a>
+          <p id="git__bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            neque id alias illo, nisi autem.
+          </p>
+          <div class="git__infos">
+            <div class="git__info">
+              <h4 class="git__tik">Followers</h4>
+              <p class="git__tak" id="git__followers">2589</p>
             </div>
-            <div class="right">
-                <h1 id="name"></h1>
-                <a href="" id="username-url" target="_blank"><h4 id="username"></h4></a>
-                <p id="bio"></p>
-                <div class="main">
-                    <div class="one">
-                        <h4>Followers</h4>
-                        <h5 id="follower"></h5>
-                    </div>
-                    <div class="two">
-                        <h4>Following</h4>
-                        <h5 id="following"></h5>
-                    </div>
-                    <div class="three">
-                        <h4>Repositories</h4>
-                        <h5 id="repo"></h5>
-                    </div>
-                </div>
-                <div class="info">
-                    <div class="top">
-                        <div class="adress">
-                            <i class="fa-solid fa-location-dot lower-icon"></i>
-                            <p id="location"></p>
-                        </div>
-                        <div class="adress adress2">
-                            <i class="fa-solid fa-link lower-icon"></i>
-                            <a href="" id="website-url" target="_blank"><p id="website"></p></a>
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="adress">
-                            <i class="fa-brands fa-square-twitter lower-icon"></i>
-                            <a href="" id="twitter-url" target="_blank"><p id="twitter"></p></a>
-                        </div>
-                        <div class="adress adress2">
-                            <i class="fa-regular fa-building lower-icon"></i>
-                            <p id="organization"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="join">
-                    Join date:&ThickSpace;<p id="joindate"></p>
-                </div>
+            <div class="git__info">
+              <h4 class="git__tik">Following</h4>
+              <p class="git__tak" id="git__following">0</p>
             </div>
+            <div class="git__info">
+              <h4 class="git__tik">Repositories</h4>
+              <p class="git__tak" id="git__repo">15</p>
+            </div>
+          </div>
+          <div class="git__details">
+            <div class="git__dtls">
+              <div>
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span id="git__location">Lorem, ipsum dolor.</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-up-right-from-square"></i>
+                <a href="" target="_blank" id="git__website"
+                  >Lorem, ipsum dolor.</a
+                >
+              </div>
+            </div>
+            <div class="git__dtls">
+              <div>
+                <i class="fa-brands fa-twitter"></i>
+                <a target="_blank" href="" id="git__twitter">twitter</a>
+              </div>
+              <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <p target="_blank" id="git__org"></p>
+              </div>
+            </div>
+          </div>
+          <div class="git__joined">
+            <p>Joined: <span id="git__joined">2-10-2022</span></p>
+          </div>
         </div>
-        <div class="thecredit">
-            <a href="https://github.com/irfanshadikofficial/" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://facebook.com/irfanshadikofficial" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCyv-8tjvvMctkIlljjw9Gfg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/in/irfanshadikofficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://twitter.com/irfanshadikoffi" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://irfanshadik.live" target="_blank"><i class="fa-solid fa-globe"></i></a>
-        </div>
+      </div>
+      <div class="git__credit">
+        <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="" target="_blank"><i class="fa-solid fa-globe"></i></a>
+      </div>
     </div>
-<!--JS Linking-->
-<script src="script.js"></script>
-</body>
+    <!-- js linking -->
+    <script src="./src/script.js"></script>
+  </body>
 </html>
